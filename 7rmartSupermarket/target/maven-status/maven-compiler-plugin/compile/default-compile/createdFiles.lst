@@ -1,0 +1,15 @@
+com\supermarket\pages\HomePage.class
+com\supermarket\utilities\ExtendReportUtility.class
+com\supermarket\pages\LoginPage.class
+com\supermarket\utilities\WaitUtility.class
+com\supermarket\pages\SubcategoryPage.class
+com\supermarket\pages\AdminUserPage.class
+com\supermarket\utilities\FileUploadUtility.class
+com\supermarket\constants\Constants.class
+com\supermarket\utilities\ScreenshotUtility.class
+com\supermarket\pages\ManageFooterTextPage.class
+com\supermarket\pages\ManageContactPage.class
+com\supermarket\utilities\PageUtility.class
+com\supermarket\pages\ManagenewsPage.class
+com\supermarket\pages\ManageProductPage.class
+com\supermarket\utilities\ExcelUtility.class
