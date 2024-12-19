@@ -16,8 +16,6 @@ public class ManageProductPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-product' and@class='small-box-footer']")
-	private WebElement productmoreinfo;
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")
 	private WebElement newbutton;
 	@FindBy(xpath = "//input[@id='title' and @type='text']")
@@ -34,11 +32,6 @@ public class ManageProductPage {
 	private WebElement maxquantity;
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement save;
-
-	public ManageProductPage productMoreInfo() {
-		productmoreinfo.click();
-		return this;
-	}
 
 	public ManageProductPage clickNewButton() {
 		newbutton.click();

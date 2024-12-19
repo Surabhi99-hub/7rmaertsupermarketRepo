@@ -16,8 +16,6 @@ public class ManageContactPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-contact' and @class='small-box-footer']")
-	private WebElement contactmoreinfo;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/contact/edit_contact?edit=1']")
 	private WebElement edit;
 	@FindBy(xpath = "//input[@id='phone']")
@@ -34,11 +32,6 @@ public class ManageContactPage {
 	private WebElement update;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
-
-	public ManageContactPage contactMoreInfo() {
-		pageutility.clickElementUsingJSExecutor(driver, contactmoreinfo);
-		return this;
-	}
 
 	public ManageContactPage editButton() {
 		edit.click();

@@ -27,9 +27,9 @@ public class ManageContactTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
 		homepage = loginpage.clickSignin();
-		managecontactpage.contactMoreInfo().editButton().enterPhone(phonefield).enterEmail(emailfield)
-				.enterAddress(addressfield).deliveryTime(deliverytimefield).deliveryChargeLimit(deliverychargefield)
-				.updateButton();
+		managecontactpage = homepage.contactMoreInfo();
+		managecontactpage.editButton().enterPhone(phonefield).enterEmail(emailfield).enterAddress(addressfield)
+				.deliveryTime(deliverytimefield).deliveryChargeLimit(deliverychargefield).updateButton();
 		boolean message = managecontactpage.isAlert();
 		Assert.assertTrue(message, Constants.UPDATECONTACT);
 	}

@@ -9,15 +9,13 @@ import com.supermarket.utilities.PageUtility;
 
 public class ManagenewsPage {
 	WebDriver driver;
-	PageUtility pageutility=new PageUtility();
+	PageUtility pageutility = new PageUtility();
 
 	public ManagenewsPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='active nav-link']")
-	private WebElement managenewsmoreinfo;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")
 	private WebElement newsbuttonnew;
 	@FindBy(xpath = "//textarea[@id='news']")
@@ -26,11 +24,6 @@ public class ManagenewsPage {
 	private WebElement newsbuttonsave;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
-
-	public ManagenewsPage newsMoreInfo() {
-		pageutility.clickElementUsingJSExecutor(driver, managenewsmoreinfo);
-		return this;
-	}
 
 	public ManagenewsPage newButton() {
 		newsbuttonnew.click();

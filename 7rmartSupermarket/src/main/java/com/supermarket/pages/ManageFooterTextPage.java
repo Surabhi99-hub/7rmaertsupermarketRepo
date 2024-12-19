@@ -16,8 +16,6 @@ public class ManageFooterTextPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext' and @class='small-box-footer']")
-	private WebElement footermoreinfo;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=1']")
 	private WebElement updatebutton;
 	@FindBy(xpath = "//textarea[@id='content']")
@@ -30,11 +28,6 @@ public class ManageFooterTextPage {
 	private WebElement update;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
-
-	public ManageFooterTextPage footerTextMoreInfo() {
-		pageutility.clickElementUsingJSExecutor(driver, footermoreinfo);
-		return this;
-	}
 
 	public ManageFooterTextPage actionButton() {
 		updatebutton.click();

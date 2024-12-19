@@ -25,8 +25,8 @@ public class ManageFooterTextTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
 		homepage = loginpage.clickSignin();
-		managefootertextpage.footerTextMoreInfo().actionButton().enterAddress(address).enterEmail(email)
-				.enterPhone(phone).updateButton();
+		managefootertextpage = homepage.footerTextMoreInfo();
+		managefootertextpage.actionButton().enterAddress(address).enterEmail(email).enterPhone(phone).updateButton();
 		boolean alertmessage = managefootertextpage.isAlert();
 		Assert.assertTrue(alertmessage, Constants.UPDATEFOOTERTEXT);
 	}
@@ -38,7 +38,7 @@ public class ManageFooterTextTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
 		homepage = loginpage.clickSignin();
-		managefootertextpage.footerTextMoreInfo();
+		managefootertextpage = homepage.footerTextMoreInfo();
 		boolean updatebutton = managefootertextpage.isUpdateButtonPresent();
 		Assert.assertTrue(updatebutton, Constants.UPDATEBUTTONPRESENTORNOT);
 	}

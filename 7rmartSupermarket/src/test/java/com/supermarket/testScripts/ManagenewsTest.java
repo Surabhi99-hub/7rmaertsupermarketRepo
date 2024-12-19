@@ -14,7 +14,7 @@ import com.supermarket.utilities.ExcelUtility;
 public class ManagenewsTest extends Base {
 	HomePage homepage;
 	ManagenewsPage managenewspage;
-	
+
 	@Test(description = "Verify the user is able to add the new news")
 	public void verifyTheUserIsAbleToAddNews() throws IOException {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "LoginPage");
@@ -22,8 +22,9 @@ public class ManagenewsTest extends Base {
 		String news = ExcelUtility.getStringData(2, 0, "Managenews");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
-		homepage=loginpage.clickSignin();
-		managenewspage.newsMoreInfo().newButton().enterNews(news).saveButton();
+		homepage = loginpage.clickSignin();
+		managenewspage = homepage.newsMoreInfo();
+		managenewspage.newButton().enterNews(news).saveButton();
 		boolean alertmessage = managenewspage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.ADDNEWS);
 	}

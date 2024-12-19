@@ -26,8 +26,9 @@ public class ManageProductTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
 		homepage = loginpage.clickSignin();
-		manageproductpage.productMoreInfo().clickNewButton().enterTitle(titlefield).productType().priceType()
-				.enterValue(valuefield).enterUnit().enterMaxQuantity(quantityfield).clickSaveButton();
+		manageproductpage = homepage.productMoreInfo();
+		manageproductpage.clickNewButton().enterTitle(titlefield).productType().priceType().enterValue(valuefield)
+				.enterUnit().enterMaxQuantity(quantityfield).clickSaveButton();
 		String actualalerttext = manageproductpage.getAlertText();
 		String expectedalerttext = "Please enter litre price";
 		Assert.assertEquals(actualalerttext, expectedalerttext, Constants.PRODUCTALERTPROMPTDISPLAYED);

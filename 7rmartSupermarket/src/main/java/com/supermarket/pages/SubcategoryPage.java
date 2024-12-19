@@ -18,8 +18,6 @@ public class SubcategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category' and @class=' nav-link']")
-	private WebElement subcatmoreinfo;
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")
 	private WebElement subcatnewbutton;
 	@FindBy(xpath = "//select[@id='cat_id']")
@@ -34,11 +32,6 @@ public class SubcategoryPage {
 	private WebElement subcatdeletebutton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
-
-	public SubcategoryPage subCategoryMoreInfo() {
-		subcatmoreinfo.click();
-		return this;
-	}
 
 	public SubcategoryPage newButton() {
 		subcatnewbutton.click();

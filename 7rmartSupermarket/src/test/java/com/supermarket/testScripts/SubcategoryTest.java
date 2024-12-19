@@ -23,8 +23,8 @@ public class SubcategoryTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepage = loginpage.clickSignin();
-		subcategorypage.subCategoryMoreInfo().newButton().enterCategory().enterSubCategory(productname).uploadImage()
-				.saveButton();
+		subcategorypage = homepage.subCategoryMoreInfo();
+		subcategorypage.newButton().enterCategory().enterSubCategory(productname).uploadImage().saveButton();
 		boolean alertmessage = subcategorypage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.ADDSUBCATEGORY);
 	}
@@ -36,7 +36,8 @@ public class SubcategoryTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepage = loginpage.clickSignin();
-		subcategorypage.subCategoryMoreInfo().deleteButton();
+		subcategorypage = homepage.subCategoryMoreInfo();
+		subcategorypage.deleteButton();
 		boolean alertmessage = subcategorypage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.DELETESUBCATEGORY);
 	}

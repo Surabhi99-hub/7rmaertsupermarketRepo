@@ -16,16 +16,4 @@
       </class> <!-- com.supermarket.testScripts.ManageContactTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test thread-count="5" name="EdgeTest(failed)">
-    <parameter name="browser" value="Edge"/>
-    <classes>
-      <class name="com.supermarket.testScripts.ManageContactTest">
-        <methods>
-          <include name="verifyTheUserIsAbleToUpdateContact"/>
-          <include name="initializeBrowser"/>
-          <include name="browserQuit"/>
-        </methods>
-      </class> <!-- com.supermarket.testScripts.ManageContactTest -->
-    </classes>
-  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
