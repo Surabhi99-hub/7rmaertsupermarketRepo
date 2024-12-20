@@ -10,7 +10,6 @@
       <class name="com.supermarket.testScripts.ManageFooterTextTest">
         <methods>
           <include name="initializeBrowser"/>
-          <include name="verifyWhetherTheUpdateButtonIsPresent"/>
           <include name="browserQuit"/>
           <include name="verifyTheUserIsAbleToUpdateFooterTextInformation"/>
         </methods>

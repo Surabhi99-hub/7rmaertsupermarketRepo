@@ -10,6 +10,7 @@ import com.supermarket.pages.HomePage;
 import com.supermarket.pages.LoginPage;
 import com.supermarket.pages.ManageFooterTextPage;
 import com.supermarket.utilities.ExcelUtility;
+import com.supermarket.utilities.FakerUtility;
 
 public class ManageFooterTextTest extends Base {
 	HomePage homepage;
@@ -17,16 +18,18 @@ public class ManageFooterTextTest extends Base {
 
 	@Test(description = "Verify the user is able to update the foooter text information by filling the manadatory fields")
 	public void verifyTheUserIsAbleToUpdateFooterTextInformation() throws IOException {
+		FakerUtility fakerutility=new FakerUtility();
 		String usernamefield = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordfield = ExcelUtility.getStringData(1, 1, "LoginPage");
-		String address = ExcelUtility.getStringData(1, 0, "FooterText");
+		//String address = ExcelUtility.getStringData(1, 0, "FooterText");
 		String email = ExcelUtility.getStringData(1, 1, "FooterText");
-		String phone = ExcelUtility.getStringData(1, 2, "FooterText");
+		String phone = ExcelUtility.getIntegerData(1, 2, "FooterText");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
 		homepage = loginpage.clickSignin();
 		managefootertextpage = homepage.footerTextMoreInfo();
-		managefootertextpage.actionButton().enterAddress(address).enterEmail(email).enterPhone(phone).updateButton();
+		String institutionname=fakerutility.getFakeFirstName();
+		managefootertextpage.actionButton().enterAddress(institutionname).enterEmail(email).enterPhone(phone).updateButton();
 		boolean alertmessage = managefootertextpage.isAlert();
 		Assert.assertTrue(alertmessage, Constants.UPDATEFOOTERTEXT);
 	}

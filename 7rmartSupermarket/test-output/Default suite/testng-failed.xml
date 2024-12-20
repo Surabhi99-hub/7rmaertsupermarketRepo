@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.supermarket.testScripts.ManagenewsTest">
+      <class name="com.supermarket.testScripts.ManageFooterTextTest">
         <methods>
           <include name="initializeBrowser"/>
           <include name="browserQuit"/>
-          <include name="verifyTheUserIsAbleToAddNews"/>
+          <include name="verifyTheUserIsAbleToUpdateFooterTextInformation"/>
         </methods>
-      </class> <!-- com.supermarket.testScripts.ManagenewsTest -->
+      </class> <!-- com.supermarket.testScripts.ManageFooterTextTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
