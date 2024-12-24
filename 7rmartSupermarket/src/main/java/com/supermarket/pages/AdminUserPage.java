@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.supermarket.utilities.PageUtility;
+import com.supermarket.utilities.WaitUtility;
 
 public class AdminUserPage {
 	WebDriver driver;
@@ -30,6 +31,8 @@ public class AdminUserPage {
 	private WebElement alert;
 
 	public AdminUserPage newButton() {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.waitForElementToBeClickable(driver, adminnewbutton);
 		adminnewbutton.click();
 		return this;
 	}
@@ -55,6 +58,8 @@ public class AdminUserPage {
 	}
 
 	public boolean isAlert() {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.waitForAlertToBeVisible(driver);
 		return alert.isDisplayed();
 	}
 }

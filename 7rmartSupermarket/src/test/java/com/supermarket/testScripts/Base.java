@@ -2,6 +2,7 @@ package com.supermarket.testScripts;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -15,6 +16,7 @@ import org.testng.annotations.Parameters;
 
 import com.supermarket.constants.Constants;
 import com.supermarket.utilities.ScreenshotUtility;
+import com.supermarket.utilities.WaitUtility;
 
 public class Base {
 	public WebDriver driver;
@@ -46,6 +48,7 @@ public class Base {
 		//driver = new ChromeDriver();
 		//driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.get(properties.getProperty("url"));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
 		driver.manage().window().maximize();
 	}
 

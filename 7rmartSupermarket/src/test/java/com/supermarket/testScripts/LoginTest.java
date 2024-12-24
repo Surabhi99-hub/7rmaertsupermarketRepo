@@ -11,7 +11,8 @@ import com.supermarket.pages.LoginPage;
 import com.supermarket.utilities.ExcelUtility;
 
 public class LoginTest extends Base {
-	@Test(description = "Verify the user is able to login with valid username and password", retryAnalyzer = com.supermarket.retry.Retry.class, groups = {"Regression" })
+	@Test(description = "Verify the user is able to login with valid username and password", retryAnalyzer = com.supermarket.retry.Retry.class, groups = {
+			"Regression" })
 	public void verifyTheUserCanLoginUsingValidCredentials() throws IOException {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");

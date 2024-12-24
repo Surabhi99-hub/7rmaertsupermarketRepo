@@ -5,8 +5,8 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.supermarket.constants.Constants;
 import com.supermarket.pages.LoginPage;
+import com.supermarket.constants.Constants;
 import com.supermarket.pages.HomePage;
 import com.supermarket.utilities.ExcelUtility;
 
