@@ -30,7 +30,7 @@ public class ManageProductTest extends Base {
 		manageproductpage.clickNewButton().enterTitle(titlefield).productType().priceType().enterValue(valuefield)
 				.enterUnit().enterMaxQuantity(quantityfield).clickSaveButton();
 		String actualalerttext = manageproductpage.getAlertText();
-		String expectedalerttext = "Please enter litre price";
+		String expectedalerttext = ExcelUtility.getStringData(1, 4, "ManageProduct");
 		Assert.assertEquals(actualalerttext, expectedalerttext, Constants.PRODUCTALERTPROMPTDISPLAYED);
 	}
 }

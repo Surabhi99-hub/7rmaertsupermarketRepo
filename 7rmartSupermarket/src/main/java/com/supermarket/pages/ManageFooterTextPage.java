@@ -61,7 +61,7 @@ public class ManageFooterTextPage {
 		return updatebutton.isDisplayed();
 	}
 
-	public boolean isAlert() {
+	public boolean isAlertDisplayed() {
 		return alert.isDisplayed();
 	}
 }

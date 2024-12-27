@@ -1,11 +1,3 @@
-com\supermarket\testScripts\HomePageTest.class
 com\supermarket\generateReport\Listeners.class
-com\supermarket\testScripts\ManageContactTest.class
 com\supermarket\testScripts\Base.class
-com\supermarket\testScripts\ManageProductTest.class
 com\supermarket\retry\Retry.class
-com\supermarket\testScripts\ManageFooterTextTest.class
-com\supermarket\testScripts\AdminUserTest.class
-com\supermarket\testScripts\ManagenewsTest.class
-com\supermarket\testScripts\SubcategoryTest.class
-com\supermarket\testScripts\LoginTest.class

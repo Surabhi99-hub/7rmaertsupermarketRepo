@@ -30,7 +30,7 @@ public class ManageContactTest extends Base {
 		managecontactpage = homepage.contactMoreInfo();
 		managecontactpage.editButton().enterPhone(phonefield).enterEmail(emailfield).enterAddress(addressfield)
 				.deliveryTime(deliverytimefield).deliveryChargeLimit(deliverychargefield).updateButton();
-		boolean message = managecontactpage.isAlert();
+		boolean message = managecontactpage.isAlertDisplayed();
 		Assert.assertTrue(message, Constants.UPDATECONTACT);
 	}
 }

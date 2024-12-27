@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtility {
 	public static final long IMPLICIT_WAIT = 10;
-	public static final long EXPLICIT_WAIT = 50;
+	public static final long EXPLICIT_WAIT = 10;
 
 	public void waitForElement(WebDriver driver, WebElement target) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));

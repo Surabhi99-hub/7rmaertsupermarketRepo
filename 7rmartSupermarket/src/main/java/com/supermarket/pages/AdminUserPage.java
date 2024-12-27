@@ -57,7 +57,7 @@ public class AdminUserPage {
 		return this;
 	}
 
-	public boolean isAlert() {
+	public boolean isAlertDisplayed() {
 		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForAlertToBeVisible(driver);
 		return alert.isDisplayed();

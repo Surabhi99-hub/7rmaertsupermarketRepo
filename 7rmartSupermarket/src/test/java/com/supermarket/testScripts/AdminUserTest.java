@@ -27,7 +27,7 @@ public class AdminUserTest extends Base {
 		homepage = loginpage.clickSignin();
 		adminuserpage = homepage.adminUserMoreInfo();
 		adminuserpage.newButton().enterUsername(username).enterPassword(password).enterUserType().saveButton();
-		boolean alertmessage = adminuserpage.isAlert();
+		boolean alertmessage = adminuserpage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.ADDNEWUSER);
 	}
 }

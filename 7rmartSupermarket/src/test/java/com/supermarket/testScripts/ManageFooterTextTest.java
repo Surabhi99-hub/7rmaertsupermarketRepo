@@ -30,7 +30,7 @@ public class ManageFooterTextTest extends Base {
 		managefootertextpage = homepage.footerTextMoreInfo();
 		String institutionname=fakerutility.getFakeFirstName();
 		managefootertextpage.actionButton().enterAddress(institutionname).enterEmail(email).enterPhone(phone).updateButton();
-		boolean alertmessage = managefootertextpage.isAlert();
+		boolean alertmessage = managefootertextpage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.UPDATEFOOTERTEXT);
 	}
 
