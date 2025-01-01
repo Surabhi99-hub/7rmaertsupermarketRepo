@@ -21,7 +21,6 @@ public class PageUtility {
 	public void selectByVisibleText(WebElement element, String visibleText) {
 		Select select = new Select(element);
 		select.selectByVisibleText(visibleText);
-		;
 	}
 
 	// methods for Mouse-based interactions
