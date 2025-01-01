@@ -8,9 +8,9 @@
 	<test name="ChromeTest">
 		<parameter name="browser" value="Chrome"></parameter>
 		<classes>
-			<class name="com.supermarket.testScripts.ManageContactTest">
+			<class name="com.supermarket.testScripts.ManageProductTest">
 				<methods>
-					<include name="verifyTheUserIsAbleToUpdateContact"></include>
+					<include name="verifyWhetherTheAlertPromptIsDisplayed"></include>
 				</methods>
 			</class>
 		</classes>
@@ -18,9 +18,9 @@
 	<test name="EdgeTest">
 		<parameter name="browser" value="Edge"></parameter>
 		<classes>
-			<class name="com.supermarket.testScripts.ManageContactTest">
+			<class name="com.supermarket.testScripts.ManageProductTest">
 				<methods>
-					<include name="verifyTheUserIsAbleToUpdateContact"></include>
+					<include name="verifyWhetherTheAlertPromptIsDisplayed"></include>
 				</methods>
 			</class>
 		</classes>

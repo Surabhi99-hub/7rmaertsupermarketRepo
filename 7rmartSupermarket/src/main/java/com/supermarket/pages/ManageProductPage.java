@@ -43,18 +43,18 @@ public class ManageProductPage {
 		return this;
 	}
 
-	public ManageProductPage productType() {
+	public ManageProductPage clickProductType() {
 		producttype.click();
 		return this;
 	}
 
-	public ManageProductPage priceType() {
+	public ManageProductPage clickPriceType() {
 		pricetype.click();
 		return this;
 	}
 
-	public ManageProductPage enterValue(String val) {
-		pageutility.sendTextUsingJSExecutor(driver, value, val);
+	public ManageProductPage enterValue(String litrevalue) {
+		pageutility.sendTextUsingJSExecutor(driver, value, litrevalue);
 		return this;
 	}
 
@@ -63,8 +63,8 @@ public class ManageProductPage {
 		return this;
 	}
 
-	public ManageProductPage enterMaxQuantity(String max) {
-		pageutility.sendTextUsingJSExecutor(driver, maxquantity, max);
+	public ManageProductPage enterMaxQuantity(String quantity) {
+		pageutility.sendTextUsingJSExecutor(driver, maxquantity, quantity);
 		return this;
 	}
 
@@ -73,7 +73,7 @@ public class ManageProductPage {
 		return this;
 	}
 
-	public String getAlertText() {
+	public String isGetAlertText() {
 		return pageutility.getTextFromAlert(driver);
 	}
 }

@@ -19,8 +19,8 @@ public class HomePageTest extends Base {
 		String passwordfield = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
-		homepage = loginpage.clickSignin();
-		homepage.clickAdmin().logoutButton();
+		homepage = loginpage.clickSignIn();
+		homepage.clickAdmin().clickLogoutButton();
 		boolean login = homepage.isLoginPageDisplayed();
 		Assert.assertTrue(login, Constants.LOGOUT);
 	}

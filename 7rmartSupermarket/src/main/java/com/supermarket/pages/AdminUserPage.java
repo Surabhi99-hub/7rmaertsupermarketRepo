@@ -30,14 +30,14 @@ public class AdminUserPage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
 
-	public AdminUserPage newButton() {
+	public AdminUserPage clickNewButton() {
 		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForElementToBeClickable(driver, adminnewbutton);
 		adminnewbutton.click();
 		return this;
 	}
 
-	public AdminUserPage enterUsername(String username) {
+	public AdminUserPage enterUserName(String username) {
 		adminusername.sendKeys(username);
 		return this;
 	}
@@ -52,14 +52,12 @@ public class AdminUserPage {
 		return this;
 	}
 
-	public AdminUserPage saveButton() {
+	public AdminUserPage clickSaveButton() {
 		adminsavebutton.click();
 		return this;
 	}
 
 	public boolean isAlertDisplayed() {
-		WaitUtility waitutility = new WaitUtility();
-		waitutility.waitForAlertToBeVisible(driver);
 		return alert.isDisplayed();
 	}
 }

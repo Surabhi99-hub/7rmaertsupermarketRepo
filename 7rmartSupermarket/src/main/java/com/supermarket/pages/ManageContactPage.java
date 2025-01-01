@@ -34,8 +34,8 @@ public class ManageContactPage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
 
-	public ManageContactPage editButton() {
-		WaitUtility waitutility=new WaitUtility();
+	public ManageContactPage clickEditButton() {
+		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForElement(driver, edit);
 		edit.click();
 		return this;
@@ -59,25 +59,25 @@ public class ManageContactPage {
 		return this;
 	}
 
-	public ManageContactPage deliveryTime(String timevalue) {
+	public ManageContactPage enterDeliveryTime(String timevalue) {
 		time.clear();
 		pageutility.sendTextUsingJSExecutor(driver, time, timevalue);
 		return this;
 	}
 
-	public ManageContactPage deliveryChargeLimit(String chargevalue) {
+	public ManageContactPage enterDeliveryChargeLimit(String chargevalue) {
 		chargelimit.clear();
 		pageutility.sendTextUsingJSExecutor(driver, chargelimit, chargevalue);
 		return this;
 	}
 
-	public ManageContactPage updateButton() {
+	public ManageContactPage clickUpdateButton() {
 		pageutility.clickElementUsingJSExecutor(driver, update);
 		return this;
 	}
 
 	public boolean isAlertDisplayed() {
-		WaitUtility waitutility=new WaitUtility();
+		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForAlertToBeVisible(driver);
 		return alert.isDisplayed();
 	}

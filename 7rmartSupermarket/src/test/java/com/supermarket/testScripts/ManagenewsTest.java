@@ -22,9 +22,9 @@ public class ManagenewsTest extends Base {
 		String news = ExcelUtility.getStringData(2, 0, "Managenews");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.clickSignin();
-		managenewspage = homepage.newsMoreInfo();
-		managenewspage.newButton().enterNews(news).saveButton();
+		homepage = loginpage.clickSignIn();
+		managenewspage = homepage.clickNewsMoreInfo();
+		managenewspage.clickNewButton().enterNews(news).clickSaveButton();
 		boolean alertmessage = managenewspage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.ADDNEWS);
 	}

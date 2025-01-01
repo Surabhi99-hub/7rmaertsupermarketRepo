@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.supermarket.testScripts.ManageProductTest">
+      <class name="com.supermarket.testScripts.AdminUserTest">
         <methods>
           <include name="initializeBrowser"/>
+          <include name="verifyTheUserIsAbleToAddNewAdminUser"/>
           <include name="browserQuit"/>
-          <include name="verifyWhetherTheAlertPromptIsDisplayed"/>
         </methods>
-      </class> <!-- com.supermarket.testScripts.ManageProductTest -->
+      </class> <!-- com.supermarket.testScripts.AdminUserTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

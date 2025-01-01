@@ -35,32 +35,32 @@ public class HomePage {
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement signin;
 
-	public AdminUserPage adminUserMoreInfo() {
+	public AdminUserPage clickAdminUserMoreInfo() {
 		pageutility.clickElementUsingJSExecutor(driver, adminmoreinfo);
 		return new AdminUserPage(driver);
 	}
 
-	public ManageContactPage contactMoreInfo() {
+	public ManageContactPage clickContactMoreInfo() {
 		contactmoreinfo.click();
 		return new ManageContactPage(driver);
 	}
 
-	public ManageFooterTextPage footerTextMoreInfo() {
+	public ManageFooterTextPage clickFooterTextMoreInfo() {
 		pageutility.clickElementUsingJSExecutor(driver, footermoreinfo);
 		return new ManageFooterTextPage(driver);
 	}
 
-	public ManagenewsPage newsMoreInfo() {
+	public ManagenewsPage clickNewsMoreInfo() {
 		managenewsmoreinfo.click();
 		return new ManagenewsPage(driver);
 	}
 
-	public ManageProductPage productMoreInfo() {
+	public ManageProductPage clickProductMoreInfo() {
 		productmoreinfo.click();
 		return new ManageProductPage(driver);
 	}
 
-	public SubcategoryPage subCategoryMoreInfo() {
+	public SubcategoryPage clickSubCategoryMoreInfo() {
 		subcatmoreinfo.click();
 		return new SubcategoryPage(driver);
 	}
@@ -70,7 +70,7 @@ public class HomePage {
 		return this;
 	}
 
-	public LoginPage logoutButton() {
+	public LoginPage clickLogoutButton() {
 		logout.click();
 		return new LoginPage(driver);
 	}

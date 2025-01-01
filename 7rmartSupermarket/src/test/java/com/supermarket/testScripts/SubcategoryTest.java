@@ -22,9 +22,9 @@ public class SubcategoryTest extends Base {
 		String productname = ExcelUtility.getStringData(1, 0, "SubCategory");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.clickSignin();
-		subcategorypage = homepage.subCategoryMoreInfo();
-		subcategorypage.newButton().enterCategory().enterSubCategory(productname).uploadImage().saveButton();
+		homepage = loginpage.clickSignIn();
+		subcategorypage = homepage.clickSubCategoryMoreInfo();
+		subcategorypage.clickNewButton().enterCategory().enterSubCategory(productname).uploadImage().clickSaveButton();
 		boolean alertmessage = subcategorypage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.ADDSUBCATEGORY);
 	}
@@ -35,9 +35,9 @@ public class SubcategoryTest extends Base {
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.clickSignin();
-		subcategorypage = homepage.subCategoryMoreInfo();
-		subcategorypage.deleteButton();
+		homepage = loginpage.clickSignIn();
+		subcategorypage = homepage.clickSubCategoryMoreInfo();
+		subcategorypage.clickDeleteButton();
 		boolean alertmessage = subcategorypage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.DELETESUBCATEGORY);
 	}

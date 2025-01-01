@@ -25,11 +25,11 @@ public class ManageProductTest extends Base {
 		String quantityfield = ExcelUtility.getIntegerData(1, 2, "ManageProduct");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
-		homepage = loginpage.clickSignin();
-		manageproductpage = homepage.productMoreInfo();
-		manageproductpage.clickNewButton().enterTitle(titlefield).productType().priceType().enterValue(valuefield)
-				.enterUnit().enterMaxQuantity(quantityfield).clickSaveButton();
-		String actualalerttext = manageproductpage.getAlertText();
+		homepage = loginpage.clickSignIn();
+		manageproductpage = homepage.clickProductMoreInfo();
+		manageproductpage.clickNewButton().enterTitle(titlefield).clickProductType().clickPriceType()
+				.enterValue(valuefield).enterUnit().enterMaxQuantity(quantityfield).clickSaveButton();
+		String actualalerttext = manageproductpage.isGetAlertText();
 		String expectedalerttext = ExcelUtility.getStringData(1, 4, "ManageProduct");
 		Assert.assertEquals(actualalerttext, expectedalerttext, Constants.PRODUCTALERTPROMPTDISPLAYED);
 	}

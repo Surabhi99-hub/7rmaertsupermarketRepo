@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-27T15:52:08 IST" name="Suite" finished-at="2024-12-27T15:52:23 IST" duration-ms="15359">
+  <suite started-at="2024-12-31T16:24:17 IST" name="Suite" finished-at="2024-12-31T16:24:30 IST" duration-ms="12944">
     <groups>
     </groups>
-    <test started-at="2024-12-27T15:52:08 IST" name="Test" finished-at="2024-12-27T15:52:23 IST" duration-ms="15359">
-      <class name="com.supermarket.testScripts.ManageProductTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.supermarket.testScripts.ManageProductTest@30f842ca]" started-at="2024-12-27T15:52:08 IST" name="initializeBrowser" finished-at="2024-12-27T15:52:14 IST" duration-ms="6252" status="PASS">
+    <test started-at="2024-12-31T16:24:17 IST" name="Test" finished-at="2024-12-31T16:24:30 IST" duration-ms="12944">
+      <class name="com.supermarket.testScripts.ManagenewsTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:com.supermarket.testScripts.ManagenewsTest@30f842ca]" started-at="2024-12-31T16:24:17 IST" name="initializeBrowser" finished-at="2024-12-31T16:24:24 IST" duration-ms="6851" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyWhetherTheAlertPromptIsDisplayed()[pri:0, instance:com.supermarket.testScripts.ManageProductTest@30f842ca]" started-at="2024-12-27T15:52:14 IST" name="verifyWhetherTheAlertPromptIsDisplayed" description="Verify whether the alert is prompted while saving the product page without filling the manadetory fields " finished-at="2024-12-27T15:52:22 IST" duration-ms="8058" status="PASS">
+        <test-method signature="verifyTheUserIsAbleToAddNews()[pri:0, instance:com.supermarket.testScripts.ManagenewsTest@30f842ca]" started-at="2024-12-31T16:24:24 IST" name="verifyTheUserIsAbleToAddNews" description="Verify the user is able to add the new news" finished-at="2024-12-31T16:24:29 IST" duration-ms="5179" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherTheAlertPromptIsDisplayed -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.supermarket.testScripts.ManageProductTest@30f842ca]" started-at="2024-12-27T15:52:22 IST" name="browserQuit" finished-at="2024-12-27T15:52:23 IST" duration-ms="886" status="PASS">
+        </test-method> <!-- verifyTheUserIsAbleToAddNews -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:com.supermarket.testScripts.ManagenewsTest@30f842ca]" started-at="2024-12-31T16:24:29 IST" name="browserQuit" finished-at="2024-12-31T16:24:30 IST" duration-ms="793" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherTheAlertPromptIsDisplayed status=SUCCESS method=ManageProductTest.verifyWhetherTheAlertPromptIsDisplayed()[pri:0, instance:com.supermarket.testScripts.ManageProductTest@30f842ca] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToAddNews status=SUCCESS method=ManagenewsTest.verifyTheUserIsAbleToAddNews()[pri:0, instance:com.supermarket.testScripts.ManagenewsTest@30f842ca] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-      </class> <!-- com.supermarket.testScripts.ManageProductTest -->
+      </class> <!-- com.supermarket.testScripts.ManagenewsTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

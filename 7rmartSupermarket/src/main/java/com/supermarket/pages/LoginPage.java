@@ -34,7 +34,7 @@ public class LoginPage {
 		return this;
 	}
 
-	public HomePage clickSignin() {
+	public HomePage clickSignIn() {
 		signinbutton.click();
 		return new HomePage(driver);
 	}

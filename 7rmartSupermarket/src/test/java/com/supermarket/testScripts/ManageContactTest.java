@@ -26,10 +26,10 @@ public class ManageContactTest extends Base {
 		String deliverychargefield = ExcelUtility.getIntegerData(1, 4, "ManageContact");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
-		homepage = loginpage.clickSignin();
-		managecontactpage = homepage.contactMoreInfo();
-		managecontactpage.editButton().enterPhone(phonefield).enterEmail(emailfield).enterAddress(addressfield)
-				.deliveryTime(deliverytimefield).deliveryChargeLimit(deliverychargefield).updateButton();
+		homepage = loginpage.clickSignIn();
+		managecontactpage = homepage.clickContactMoreInfo();
+		managecontactpage.clickEditButton().enterPhone(phonefield).enterEmail(emailfield).enterAddress(addressfield)
+				.enterDeliveryTime(deliverytimefield).enterDeliveryChargeLimit(deliverychargefield).clickUpdateButton();
 		boolean message = managecontactpage.isAlertDisplayed();
 		Assert.assertTrue(message, Constants.UPDATECONTACT);
 	}

@@ -29,7 +29,7 @@ public class ManageFooterTextPage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
 
-	public ManageFooterTextPage actionButton() {
+	public ManageFooterTextPage clickActionButton() {
 		updatebutton.click();
 		return this;
 	}
@@ -52,7 +52,7 @@ public class ManageFooterTextPage {
 		return this;
 	}
 
-	public ManageFooterTextPage updateButton() {
+	public ManageFooterTextPage clickUpdateButton() {
 		pageutility.clickElementUsingJSExecutor(driver, update);
 		return this;
 	}

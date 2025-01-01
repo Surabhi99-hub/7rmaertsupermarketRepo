@@ -33,7 +33,7 @@ public class SubcategoryPage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
 
-	public SubcategoryPage newButton() {
+	public SubcategoryPage clickNewButton() {
 		subcatnewbutton.click();
 		return this;
 	}
@@ -54,12 +54,12 @@ public class SubcategoryPage {
 		return this;
 	}
 
-	public SubcategoryPage saveButton() {
+	public SubcategoryPage clickSaveButton() {
 		pageutility.clickElementUsingJSExecutor(driver, subcatsavebutton);
 		return this;
 	}
 
-	public SubcategoryPage deleteButton() {
+	public SubcategoryPage clickDeleteButton() {
 		pageutility.clickElementUsingJSExecutor(driver, subcatdeletebutton);
 		pageutility.acceptAlert(driver);
 		return this;

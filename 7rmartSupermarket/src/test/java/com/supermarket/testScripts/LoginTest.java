@@ -17,7 +17,7 @@ public class LoginTest extends Base {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignin();
+		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignIn();
 		boolean homepage = loginpage.isHomePageDisplayed();
 		Assert.assertTrue(homepage, Constants.HOMEPAGENOTFOUND);
 	}
@@ -27,7 +27,7 @@ public class LoginTest extends Base {
 		String usernamevalue = ExcelUtility.getStringData(2, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(2, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignin();
+		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.INVALIDUSERNAMEALERT);
 	}
@@ -37,7 +37,7 @@ public class LoginTest extends Base {
 		String usernamevalue = ExcelUtility.getStringData(3, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(3, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignin();
+		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.INVALIDPASSWORDALERT);
 	}
@@ -48,7 +48,7 @@ public class LoginTest extends Base {
 		// String usernamevalue = ExcelUtility.getStringData(4, 0, "LoginPage");
 		// String passwordvalue = ExcelUtility.getStringData(4, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignin();
+		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).clickSignIn();
 		boolean alertmessage = loginpage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.INVALIDCREDENTIALSALERT);
 	}

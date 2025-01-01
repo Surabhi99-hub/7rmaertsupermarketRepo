@@ -11,7 +11,6 @@ import com.supermarket.pages.HomePage;
 import com.supermarket.pages.LoginPage;
 import com.supermarket.utilities.ExcelUtility;
 
-
 public class AdminUserTest extends Base {
 	HomePage homepage;
 	AdminUserPage adminuserpage;
@@ -24,9 +23,10 @@ public class AdminUserTest extends Base {
 		String password = ExcelUtility.getIntegerData(1, 1, "AdminUsers");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamefield).enterPassword(passwordfield);
-		homepage = loginpage.clickSignin();
-		adminuserpage = homepage.adminUserMoreInfo();
-		adminuserpage.newButton().enterUsername(username).enterPassword(password).enterUserType().saveButton();
+		homepage = loginpage.clickSignIn();
+		adminuserpage = homepage.clickAdminUserMoreInfo();
+		adminuserpage.clickNewButton().enterUserName(username).enterPassword(password).enterUserType()
+				.clickSaveButton();
 		boolean alertmessage = adminuserpage.isAlertDisplayed();
 		Assert.assertTrue(alertmessage, Constants.ADDNEWUSER);
 	}
